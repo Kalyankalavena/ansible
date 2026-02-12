@@ -1,0 +1,25 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars: # play level variables
+    GREET: "PLAY"
+  # vars_files:
+  # - course.yaml
+  vars_prompt:
+  - name: GREET
+    prompt: "Enter greeting"
+    private: false
+  tasks:
+  - name: print the variable
+    #   vars:
+    #     GREET: "TASK"
+    ansible.builtin.debug:
+     msg: "Hello from {{ GREET }}"
+      
+
+
+# 1. command line or args
+# 2. task-level variables (vars)
+# 3. prompt variables (vars_prompt)
+# 4. play-level variables (vars)
+# 5. inventory
