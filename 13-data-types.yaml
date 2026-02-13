@@ -4,13 +4,13 @@
   vars:
     course_name: "DevOps with AWS" # string variable
     course_duration: "120" #numeric variable
-    course_topics: # list variable
+    course_topics: # list variable [] this means list of items
       - linux
       - shell
       - ansible
       - AWS
     live: true # boolean variable
-    tools: # dictionary/Map variable
+    tools: # dictionary/Map variable {} this means map
       ci: jenkins
       cloud: AWS
       containerization: docker
