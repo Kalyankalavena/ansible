@@ -5,10 +5,10 @@
     GREET: "PLAY"
   # vars_files:
   # - course.yaml
-  vars_prompt:
-  - name: GREET
-    prompt: "Enter the value"
-    private: false
+  # vars_prompt:
+  # - name: GREET
+  #   prompt: "Enter the value"
+  #   private: false
   tasks:
   - name: print the variable
     #   vars:
@@ -20,6 +20,7 @@
 
 # 1. command line or args
 # 2. task-level variables (vars)
-# 3. prompt variables (vars_prompt)
-# 4. play-level variables (vars)
-# 5. inventory
+# 3. files
+# 4. prompt variables (vars_prompt)
+# 5. play-level variables (vars)
+# 6. inventory
