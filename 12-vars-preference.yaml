@@ -7,7 +7,7 @@
   # - course.yaml
   vars_prompt:
   - name: GREET
-    prompt: "Enter greeting"
+    prompt: "Enter the value"
     private: false
   tasks:
   - name: print the variable
