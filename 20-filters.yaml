@@ -53,5 +53,9 @@
         ip_address: "256.258.291.12" # invalid ip address
       ansible.builtin.debug:
         msg: "{{ ip_address | ansible.utils.ipaddr }}"
-        
 
+    - name: check ip address is valid or not
+      vars:
+        ip_address: "192.168.1.1" # valid ip address
+      ansible.builtin.debug:
+        msg: "{{ ip_address | ansible.utils.ipaddr }}"  
