@@ -41,5 +41,10 @@
         name: kalyan
       ansible.builtin.debug:
         msg: " Hello {{ name | upper }}" # convert string to uppercase
-        
+
+    - name: print min and max value from list
+      vars:
+        numbers: [10, 20, 5, 15]
+      ansible.builtin.debug:
+        msg: "Min value: {{ numbers | min }}, Max value: {{ numbers | max }}" # print min and max value from list 
 
