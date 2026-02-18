@@ -30,3 +30,10 @@
       ansible.builtin.debug:
         msg: "Course details: {{ course | items2dict }}" # convert list to map
 
+    - name: convert string to lowercase
+      vars: 
+        name: KALYAN
+      ansible.builtin.debug:
+        msg: " Hello {{ name | lower }}" # convert string to lowercase
+        
+
