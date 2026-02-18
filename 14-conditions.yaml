@@ -18,7 +18,7 @@
       when: my_number <= 10
 
 
-  
+  # other ways to write the above condition
 # - name: Check condition example
 #   hosts: all
 #   become: yes

@@ -1,0 +1,16 @@
+- name: install ngnix
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: install nginx if RHEL
+    ansible.builtin.dnf:
+      name: nginx
+      state: installed
+    when: ansible_facts['os_family'] == "RedHat"
+
+  - name: install nginx if ubuntu
+    ansible.builtin.apt:
+      name: nginx
+      state: installed
+    when: ansible_facts['os_family'] == "Debian"
