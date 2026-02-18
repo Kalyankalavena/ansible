@@ -3,9 +3,8 @@
   connection: local
 
   tasks:
-    - name: execute ls command
+    - name: execute ls command using command module
       ansible.builtin.command: ls -ltr > /tmp/ls_output.txt
-      ansible.builtin.shell: date
 
-    - name: print the date using command
-      ansible.builtin.command: date
+    - name: execute ls command using shell module
+      ansible.builtin.shell: ls -ltr > /tmp/ls_output.txt
